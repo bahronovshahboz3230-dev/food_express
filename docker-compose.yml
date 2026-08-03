@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    container_name: food_express_bot
+    env_file:
+      - .env
+    volumes:
+      - ./food_express.db:/app/food_express.db
+    restart: unless-stopped
